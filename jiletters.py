@@ -1,3 +1,7 @@
+# Copyright Adam Cripps (2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2013)
+# Licensed under the GNU GPL v2. 
+# See https://www.gnu.org/licenses/gpl-2.0.html for more information. 
+
 from wxPython.lib.grids import wxGridSizer, wxFlexGridSizer
 from wxPython.wx import *
 from sndhdr import *
