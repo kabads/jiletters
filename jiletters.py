@@ -6,7 +6,7 @@ from wxPython.lib.grids import wxGridSizer, wxFlexGridSizer
 from wxPython.wx import *
 from sndhdr import *
 from wave import *
-import os, pygame
+import os, pygame, random
 from pygame.locals import *
 ID_BUTTON1=110
 
@@ -49,7 +49,16 @@ class MyFrame (wxFrame):
 		#print "button", id.GetId(), "was pushed" #Debug
 		#print "object pushed", self # Debug
 		letterframe = LetterFrame(None, -2, "Letter", id.GetId())
-		letterframe.SetBackgroundColour('Blue')
+                if id.GetId()== 36:
+                        # I could randomise this part to get two different sounds for particular sounds (e.g. hard and soft g)
+                        if id.GetId()==36:
+                                i = random.randint(0,1)
+                                if i == 0:
+                                        print "I will say the soft g"
+                                else:
+                                        print "I will say the hard g"
+                                print str(i)
+                letterframe.SetBackgroundColour('Blue')
 		letterframe.addtext(id.GetId())
 		letterframe.Show(1)
 
@@ -128,7 +137,7 @@ app = wxPySimpleApp()
 frame = MyFrame(None, -1, "JILetters")
 frame.Show(1)
 app.MainLoop()
-
+print "You are running version 0.07"
 
 # Will be using these colours for the buttons
 #456C93 #69A5E0 #948746 #E0B969 #6B6B6B #949494 
