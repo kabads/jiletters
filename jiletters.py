@@ -55,12 +55,17 @@ class MyFrame (wxFrame):
                                 i = random.randint(0,1)
                                 if i == 0:
                                         print "I will say the soft g"
+                                        letterframe.SetBackgroundColour('Blue')
+                                        letterframe.addtext(id.GetId())
+                                        letterframe.Show(1)
                                 else:
                                         print "I will say the hard g"
                                 print str(i)
-                letterframe.SetBackgroundColour('Blue')
-		letterframe.addtext(id.GetId())
-		letterframe.Show(1)
+                
+                else:
+                        letterframe.SetBackgroundColour('Blue')
+                        letterframe.addtext(id.GetId())
+                        letterframe.Show(1)
 
 class LetterFrame(wxFrame):
 	def __init__(self,parent,ID,title, whichbutton):
